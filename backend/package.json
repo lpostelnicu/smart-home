@@ -1,0 +1,9 @@
+{
+  "name": "smart-home-backend",
+  "version": "0.0.1",
+  "description": "Server developed with express",
+  "type": "module",
+	"dependencies": {
+		"express": "^5.2.1"
+	}
+}
