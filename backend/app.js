@@ -1,7 +1,10 @@
 import express from "express";
 import "dotenv/config";
+import connectDB from "./database/connect-db.js";
 
 const port = parseInt(process.env.PORT || "3000");
+
+await connectDB();
 
 const app = express();
 
@@ -16,3 +19,5 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
   
 });
+
+// await connectDB();
