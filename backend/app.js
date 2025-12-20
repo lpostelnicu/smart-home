@@ -1,11 +1,23 @@
-import express from 'express'
+import express from "express";
+import "dotenv/config";
+import connectDB from "./database/connect-db.js";
 
-const app = express()
+const port = parseInt(process.env.PORT || "3000");
 
-app.get('/', (req, res) => {
-  res.send('Hello there! This is the server for a Smart Home.')
-})
+await connectDB();
 
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000')
-})
+const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+  res.send("Hello there! This is the server for a Smart Home.");
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+  
+});
+
+// await connectDB();
