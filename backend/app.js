@@ -1,10 +1,10 @@
 import express from "express";
 import "dotenv/config";
-import connectDB from "./database/connect-db.js";
+import { connectToDatabase } from "./database/database-connection.js";
 
 const port = parseInt(process.env.PORT || "3000");
 
-await connectDB();
+await connectToDatabase();
 
 const app = express();
 
@@ -19,5 +19,3 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
   
 });
-
-// await connectDB();
