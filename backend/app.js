@@ -1,11 +1,10 @@
 import express from "express";
 import "dotenv/config";
-// import connectDB from "./database/connect-db.js";
-import databaseConnection from "./database/database-connection.js";
+import { connectToDatabase } from "./database/database-connection.js";
 
 const port = parseInt(process.env.PORT || "3000");
 
-await databaseConnection(); // connectDB() for Mongoose.
+await connectToDatabase();
 
 const app = express();
 
