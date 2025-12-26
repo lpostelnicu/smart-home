@@ -1,12 +1,21 @@
 {
   "name": "smart-home-backend",
   "version": "0.0.1",
-  "description": "Server developed with express",
+  "description": "Server developed with express and MongoDB",
+  "author": "Lucian Postelnicu-Ciurez",
   "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongodb": "^7.0.0",
     "mongoose": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }
