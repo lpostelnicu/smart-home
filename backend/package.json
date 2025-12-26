@@ -1,5 +1,6 @@
 {
   "name": "smart-home-backend",
+  "private": true,
   "version": "0.0.1",
   "description": "Server developed with express and MongoDB",
   "author": "Lucian Postelnicu-Ciurez",
