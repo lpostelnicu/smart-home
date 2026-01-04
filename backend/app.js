@@ -1,11 +1,12 @@
 import express from "express";
 import "dotenv/config";
-import { connectToDatabase } from "./database/database-connection.js";
+// import { connectToDatabase } from "./database/database-connection.js";
+import connectDB from "./database/connect-db.js";
 import HouseRouter from "./routes/HouseRouter.js";
 
 const port = parseInt(process.env.PORT || "3000");
 
-await connectToDatabase();
+await connectDB();
 
 const app = express();
 

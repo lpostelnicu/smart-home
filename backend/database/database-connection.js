@@ -36,6 +36,9 @@ async function _connectToDatabase() {
     // Get reference to the database
     database = client.db(dbName);
 
+    // connect to a collection
+    // database.collection("houses");
+
     console.log(`Connected to database: ${database.databaseName}.`);
 
     return database;
