@@ -11,7 +11,6 @@ router.post("/houses", async (req, res) => {
     res.send(house);
   } catch (error) {
     res.status(500).send(error);
-    console.debug(error); // To be removed
   }
 });
  
