@@ -2,8 +2,7 @@ import mongoose from "mongoose";
  
 const HouseSchema = new mongoose.Schema({
   name: {
-    type: String,
-    required: true
+    type: String
   },
   description: {
     type: String
@@ -27,30 +26,22 @@ const HouseSchema = new mongoose.Schema({
   },
   rooms: {
     type: Number,
-    required: true,
     min: 1,
     max: 100
   },
   heatingSystem: {
     inBuilding: {
-      type: Boolean,
-      required: true
+      type: Boolean
     },
     productModel: {
       type: String
     },
-    type: {
+    functionType: {
       type: String,
-      enum: ["gas", "oil", "electric", "pump"],
-      required: function() {
-        return this.inBuilding === true;
-      }
+      enum: ["gas", "oil", "wood", "electric", "pump"]
     },
     remoteAccess: {
-      type: Boolean,
-      required: function() {
-        return this.inBuilding === true;
-      }
+      type: Boolean
     }
   }
 });
