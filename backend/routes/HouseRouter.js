@@ -13,5 +13,14 @@ router.post("/houses", async (req, res) => {
     res.status(500).send(error);
   }
 });
+
+router.get("/houses", async (req, res) => {
+  try {
+   const houses = await HouseModel.find({});
+    res.send(houses);
+  } catch (error) {
+    res.status(500).send({ error });
+  }
+});
  
 export default router;
