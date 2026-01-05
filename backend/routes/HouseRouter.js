@@ -22,5 +22,14 @@ router.get("/houses", async (req, res) => {
     res.status(500).send({ error });
   }
 });
+
+router.get("/houses/:id", async (req, res) => {
+  try {
+    const house = await HouseModel.findOne({ _id: req.params.id }); // to check later in client app
+    res.send(house);
+  } catch (error) {
+    res.status(500).send({ error });
+  }
+});
  
 export default router;
