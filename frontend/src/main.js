@@ -1,13 +1,20 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import "./style.css";
+import App from "./App.vue";
 
-import router from './router'
-import { createPinia, setMapStoreSuffix } from 'pinia'
+import router from "./router";
+import { createPinia, setMapStoreSuffix } from "pinia";
+import PrimeVue from "primevue/config";
+import Aura from "@primeuix/themes/aura";
 
-setMapStoreSuffix('')
-const pinia = createPinia()
-const app = createApp(App)
-app.use(router)
-app.use(pinia)
-app.mount('#app')
+setMapStoreSuffix("");
+const pinia = createPinia();
+const app = createApp(App);
+app.use(router);
+app.use(pinia);
+app.use(PrimeVue, {
+  theme: {
+    preset: Aura
+  }
+});
+app.mount("#app");
