@@ -6,6 +6,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
 /* Lato + Blinker[400, 700, 800, 900] */
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@400;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import "primeicons/primeicons.css";
 @import "tailwindcss";
 
 :root {
@@ -46,28 +47,3 @@ body {
   margin: 0 auto;
   padding: 1rem 0;
 }
-
-h1 {
-  /* font-size: 3.2em;
-  line-height: 1.1; */
-}
-
-#app {
-  /* max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center; */
-}
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */

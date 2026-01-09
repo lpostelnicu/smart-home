@@ -1,7 +1,7 @@
 <script>
 import { mapState, mapActions } from "pinia"
 import { useHousesStore } from "../store/houses"
-// import Button from "primevue/button"
+import Button from "primevue/button"
 
 export default {
   name: 'HomeView',
@@ -34,6 +34,10 @@ export default {
 
 <template>
   <div class="houseListingWrap">
+    <div class="houseListingWrap">
+      <h2>Dashboard</h2>
+      <Button label="Add Haus" icon="pi pi-plus-circle" />
+    </div>
     <div class="houseListingContainer">
       <div class="houseListingRow houseListingHead">
         <div class="houseListingItem houseListingHeadName">Hausname</div>
