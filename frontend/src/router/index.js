@@ -18,7 +18,8 @@ const routes = [
       {
         path: '/house/:id',
         name: 'house',
-        component: HousePage
+        component: HousePage,
+        props: true
       }
       // {
       //   path: '/create-house',

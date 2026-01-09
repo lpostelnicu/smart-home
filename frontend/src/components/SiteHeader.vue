@@ -20,7 +20,7 @@ export default {
 
 <template>
   <header class="header">
-    <a class="logo" href="#">
+    <a class="logo" href="/">
       Smart H<span class="oLetter">o</span>me
     </a>
   </header>

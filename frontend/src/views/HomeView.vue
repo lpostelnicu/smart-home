@@ -34,9 +34,9 @@ export default {
 
 <template>
   <div class="houseListingWrap">
-    <div class="houseListingWrap">
-      <h2>Dashboard</h2>
-      <Button label="Add Haus" icon="pi pi-plus-circle" />
+    <div class="titlePageHead">
+      <h2 class="titlePageHeading">Dashboard</h2>
+      <Button class="titlePageBtn" label="Add Haus" icon="pi pi-plus-circle" />
     </div>
     <div class="houseListingContainer">
       <div class="houseListingRow houseListingHead">
@@ -44,30 +44,59 @@ export default {
         <div class="houseListingItem houseListingHeadLocation">Standort</div>
         <div class="houseListingItem houseListingHeadRooms">Zimmer</div>
       </div>
-      <div class="houseListingRow" v-for="h in housesListing" :key="h._id">
+      <div class="" v-for="h in housesListing" :key="h._id">
+        <router-link 
+          :to="{ name: 'house', params: { id: h._id } }"
+          class="houseListingRow"
+        >
         <div class="houseListingItem houseListingItemName">{{ h.name }}</div>
         <div class="houseListingItem houseListingItemLocation">{{ h.address.city }}, {{ h.address.country }}</div>
         <div class="houseListingItem houseListingItemRooms">{{ h.rooms }}</div>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.titlePageHead {
+  margin: 10px 0 0 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  /* align-content: flex-start; */
+}
+.titlePageHeading {
+  width: 60%;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  align-self: center;
+}
+.titlePageBtn {
+  /* align-self: flex-end; */
+}
 .houseListingContainer {
   background-color: rgb(248 250 252);
   border: 0 solid rgb(248 250 252);
   border-radius: 8px;
   padding: 10px;
+  margin: 10px 0 0 0;
 }
 .houseListingRow {
+  display: block;
   background-color: #ffffff;
-  /* font-size: 14px;
-  line-height: 18px; */
+  color: #000;
   border: 1px solid rgb(229 231 235);
   border-radius: 8px;
   margin: 0 0 10px 0;
   vertical-align: text-bottom;
+}
+.houseListingRow:hover {
+  background-color: #e4e4e4;
 }
 .houseListingHead {
   background-color: rgb(248 250 252);
